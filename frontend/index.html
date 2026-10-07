@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internship Opportunities Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Internship Opportunities Finder</h1>
+        <p>Find internship opportunities in Morocco</p>
+    </header>
+
+
+    <!-- Search & Filters -->
+    <section id="filters">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search internships..."
+        >
+
+        <select id="location">
+            <option value="">All locations</option>
+        </select>
+
+        <select id="source">
+            <option value="">All sources</option>
+            <option value="Publimaroc">Publimaroc</option>
+        </select>
+
+        <select id="work-mode">
+            <option value="">All work modes</option>
+            <option value="Temps plein">Temps plein</option>
+            <option value="Remote">Remote</option>
+        </select>
+
+        <select id="internship-type">
+            <option value="">All internship types</option>
+            <option value="Stage">Stage</option>
+            <option value="PFE">PFE</option>
+        </select>
+
+        <button id="search-button">
+            Search
+        </button>
+
+    </section>
+
+
+    <!-- Statistics -->
+<section id="stats">
+
+    <div class="stat-card">
+        <h3>Total Opportunities</h3>
+        <p id="total-count">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Sources</h3>
+        <p id="source-count">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Locations</h3>
+        <p id="location-count">0</p>
+    </div>
+
+</section>
+
+
+    <!-- Internship Results -->
+    <main>
+
+        <div id="internships-container">
+            <!-- Internship cards will be inserted here by JavaScript -->
+        </div>
+
+    </main>
+
+
+    <!-- Pagination -->
+    <section id="pagination">
+
+        <button id="previous-button">
+            Previous
+        </button>
+
+        <span id="page-info">
+            Page 1
+        </span>
+
+        <button id="next-button">
+            Next
+        </button>
+
+    </section>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,8 +1,10 @@
-
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from backend.app.services.internship_service import (
     get_all_internships,
+    get_locations,
+    get_statistics,
 )
 
 
@@ -12,6 +14,13 @@ app = FastAPI(
     version="1.0.0",
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():
@@ -39,3 +48,12 @@ def get_internships(
        page=page,
        limit=limit
 )
+@app.get("/locations")
+def get_locations_endpoint():
+    return {
+        "data": get_locations()
+    }
+
+@app.get("/stats")
+def get_stats():
+    return get_statistics()

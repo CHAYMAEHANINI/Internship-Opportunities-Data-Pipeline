@@ -119,3 +119,44 @@ def get_all_internships(location=None, source=None , work_mode=None , internship
         "total": total,
         "total_pages": total_pages
     }
+def get_locations():
+    connection = get_connection()
+
+    query = """
+        SELECT DISTINCT location
+        FROM internships
+        WHERE location IS NOT NULL
+          AND location <> ''
+        ORDER BY location;
+    """
+
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        rows = cursor.fetchall()
+
+    connection.close()
+
+    return [row[0] for row in rows]
+
+def get_statistics():
+    connection = get_connection()
+
+    query = """
+        SELECT
+            COUNT(*) AS total_opportunities,
+            COUNT(DISTINCT source) AS total_sources,
+            COUNT(DISTINCT location) AS total_locations
+        FROM internships;
+    """
+
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        row = cursor.fetchone()
+
+    connection.close()
+
+    return {
+        "total_opportunities": row[0],
+        "total_sources": row[1],
+        "total_locations": row[2],
+    }
