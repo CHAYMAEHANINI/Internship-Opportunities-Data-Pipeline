@@ -21,5 +21,21 @@ def root():
 
 
 @app.get("/internships")
-def get_internships():
-    return get_all_internships()
+def get_internships(
+    location: str | None = None,
+    source: str | None = None,
+    work_mode: str | None = None,
+    internship_type: str | None = None,
+    search: str | None = None,
+    page: int = 1,
+    limit: int = 10
+):
+    return get_all_internships(
+       location=location,
+       source=source,
+       work_mode=work_mode,
+       internship_type=internship_type,
+       search=search,
+       page=page,
+       limit=limit
+)

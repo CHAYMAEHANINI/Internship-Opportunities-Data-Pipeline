@@ -1,7 +1,8 @@
 from backend.app.database.database import get_connection
+import math
 
+def get_all_internships(location=None, source=None , work_mode=None , internship_type=None , search=None , page=1, limit=10):
 
-def get_all_internships():
     connection = get_connection()
 
     query = """
@@ -21,11 +22,72 @@ def get_all_internships():
             source,
             scraped_at
         FROM internships
-        ORDER BY published_at DESC;
     """
 
+    conditions = []
+    parameters = {}
+
+    # Optional location filter
+    if location:
+        conditions.append("location ILIKE %(location)s")
+        parameters["location"] = f"%{location}%"
+
+    # Optional source filter
+    if source:
+        conditions.append("source ILIKE %(source)s")
+        parameters["source"] = f"%{source}%"
+
+    # Optional work mode filter
+    if work_mode:
+        conditions.append("work_mode ILIKE %(work_mode)s")
+        parameters["work_mode"] = f"%{work_mode}%"
+
+    # Optional internship type filter
+    if internship_type:
+        conditions.append("internship_type ILIKE %(internship_type)s")
+        parameters["internship_type"] = f"%{internship_type}%"
+
+    # Optional search
+    if search:
+        conditions.append("""
+            (
+                title ILIKE %(search)s
+                OR company ILIKE %(search)s
+                OR description ILIKE %(search)s
+                OR skills ILIKE %(search)s
+            )
+        """)
+        parameters["search"] = f"%{search}%"
+    
+    # Add WHERE only if filters exist
+    if conditions:
+        query += " WHERE " + " AND ".join(conditions)
+    count_query = """
+        SELECT COUNT(*)
+        FROM internships
+    """
+
+    if conditions:
+        count_query += " WHERE " + " AND ".join(conditions)
+
     with connection.cursor() as cursor:
-        cursor.execute(query)
+         cursor.execute(count_query, parameters)
+         total = cursor.fetchone()[0]
+    total_pages = math.ceil(total / limit)
+
+    offset = (page - 1) * limit
+
+    query += """
+       ORDER BY published_at DESC
+       LIMIT %(limit)s
+       OFFSET %(offset)s;
+     """
+
+    parameters["limit"] = limit
+    parameters["offset"] = offset
+
+    with connection.cursor() as cursor:
+        cursor.execute(query, parameters)
         rows = cursor.fetchall()
 
     connection.close()
@@ -50,4 +112,10 @@ def get_all_internships():
             "scraped_at": row[13],
         })
 
-    return internships
+    return {
+        "data": internships,
+        "page": page,
+        "limit": limit,
+        "total": total,
+        "total_pages": total_pages
+    }
