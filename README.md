@@ -1,499 +1,278 @@
-# 🚀 Internship Opportunities Data Pipeline
+# Internship Opportunities Data Pipeline
 
-An end-to-end **Data Engineering project** that automatically collects internship opportunities from web sources, processes and validates the data, stores it in PostgreSQL, exposes it through a FastAPI backend, and provides an interactive dashboard for searching and filtering opportunities.
+An automated data engineering and web application project that collects internship opportunities, transforms and validates the data, stores offers in PostgreSQL, and displays them through a web dashboard. The system is designed to identify newly discovered offers and send email notifications.
 
-The project is designed as a **Dockerized data application**, combining web scraping, data processing, database management, REST APIs, and a frontend dashboard into one reproducible workflow.
+## Overview
 
----
+Finding internship opportunities across multiple websites can be time-consuming. This project aims to simplify the process by building an automated pipeline that collects internship listings, processes the data, stores it in a database, and makes the results accessible through a dashboard.
 
-## 📌 Project Overview
+The application combines web scraping, data transformation, database management, backend API development, frontend visualization, and containerization.
 
-Internship opportunities are often distributed across multiple websites and presented in inconsistent formats.
+## Key Features
 
-This project aims to build a centralized pipeline that:
+* **Automated Web Scraping:** Collect internship listings using Scrapy.
+* **Data Cleaning and Validation:** Normalize collected data and validate required fields before loading.
+* **PostgreSQL Database:** Store internship opportunities in a relational database.
+* **Duplicate Prevention:** Identify existing offers using unique identifiers to avoid inserting duplicate records.
+* **New Offer Detection:** Detect newly inserted internship opportunities.
+* **Email Notifications:** Send email notifications when new offers are successfully stored.
+* **REST API:** Retrieve internship listings, locations, and statistics through FastAPI.
+* **Interactive Dashboard:** Browse, search, filter, and paginate internship opportunities.
+* **Scheduled Execution:** Run the pipeline automatically at 30-minute intervals using Docker Compose.
+* **Dockerized Architecture:** Run the application services in containers.
 
-* Extracts internship opportunities from web sources
-* Collects structured information such as title, company, location, internship type, skills, and dates
-* Cleans and validates the extracted data
-* Normalizes dates and text fields
-* Generates a unique identifier for each opportunity
-* Detects previously processed opportunities
-* Stores structured data in PostgreSQL
-* Exposes the data through a REST API
-* Provides an interactive dashboard for exploration
-* Runs the main application components using Docker
-
----
-
-## 🏗️ System Architecture
+## Architecture
 
 ```text
-                    ┌──────────────────────┐
-                    │  Internship Websites │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │       Scrapy         │
-                    │   Web Extraction     │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │      Raw JSON        │
-                    │    data/raw/         │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Transformation     │
-                    │  Clean / Validate    │
-                    │  Normalize / Filter  │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Processed JSON     │
-                    │ data/processed/      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │     PostgreSQL       │
-                    │   Persistent Storage │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │       FastAPI        │
-                    │      REST API        │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │      Dashboard       │
-                    │ Search & Filtering   │
-                    └──────────────────────┘
+Internship Websites
+        |
+        v
+   Scrapy Spiders
+        |
+        v
+     Raw Data
+        |
+        v
+ Data Transformation
+ Cleaning & Validation
+        |
+        v
+ Processed JSON Data
+        |
+        v
+ PostgreSQL Database
+        |
+        +--------------------+
+        |                    |
+        v                    v
+   FastAPI Backend     New Offer Detection
+        |                    |
+        v                    v
+  Web Dashboard        Email Notifications
 ```
 
----
+Docker Compose manages the application's services, including PostgreSQL, the backend, the frontend, and the scheduled pipeline.
 
-## 🔄 Data Pipeline
+## Technology Stack
 
-The pipeline follows an **Extract → Transform → Load (ETL)** workflow.
+| Component             | Technology                    |
+| --------------------- | ----------------------------- |
+| Programming Language  | Python                        |
+| Web Scraping          | Scrapy                        |
+| Data Processing       | Python, JSON                  |
+| Database              | PostgreSQL                    |
+| Database Connectivity | psycopg                       |
+| Backend API           | FastAPI                       |
+| Frontend              | HTML, CSS, JavaScript         |
+| Email Notifications   | Resend                        |
+| Containerization      | Docker, Docker Compose        |
+| Configuration         | Environment Variables, `.env` |
 
-### 1. Extract
-
-**Technology:** Scrapy
-
-The scraper collects internship opportunities from supported websites and extracts structured fields such as:
-
-* Internship title
-* Company
-* Location
-* Work mode
-* Internship type
-* Stipend
-* Description
-* Skills
-* Publication date
-* Application deadline
-* Source URL
-* Source website
-
-The scraper is configured to respect website `robots.txt` rules.
-
----
-
-### 2. Transform
-
-The transformation layer prepares the extracted data for storage.
-
-Processing includes:
-
-* Text cleaning
-* Required-field validation
-* Date normalization
-* Invalid-record filtering
-* Unique ID generation
-* Data standardization
-
-The transformation stage produces a structured processed dataset ready for database loading.
-
----
-
-### 3. Load
-
-**Technology:** PostgreSQL
-
-Validated internship records are loaded into a relational database.
-
-The database provides persistent storage and enables efficient querying from the backend.
-
-The internship table uses a unique identifier to prevent duplicate database records.
-
----
-
-## 🆕 Offer Identification
-
-Each internship opportunity receives a deterministic identifier generated from its source URL.
-
-```text
-Offer URL
-    ↓
-Hash
-    ↓
-Unique Offer ID
-```
-
-This identifier allows the pipeline to distinguish previously processed opportunities from newly discovered ones.
-
-The project maintains processing state to support incremental offer detection.
-
----
-
-## 🗄️ Database
-
-### PostgreSQL Schema
-
-The main `internships` table contains:
-
-| Column                 | Description                   |
-| ---------------------- | ----------------------------- |
-| `id`                   | Unique internship identifier  |
-| `title`                | Internship title              |
-| `company`              | Company name                  |
-| `location`             | Internship location           |
-| `work_mode`            | Remote / On-site / Hybrid     |
-| `stipend`              | Compensation information      |
-| `internship_type`      | Internship / PFE / other type |
-| `description`          | Opportunity description       |
-| `skills`               | Required skills               |
-| `published_at`         | Publication timestamp         |
-| `application_deadline` | Application deadline          |
-| `url`                  | Original opportunity URL      |
-| `source`               | Source website                |
-| `scraped_at`           | Extraction timestamp          |
-
----
-
-## ⚙️ Backend API
-
-**Technology:** FastAPI
-
-The backend provides REST endpoints for accessing and querying internship data.
-
-### Available endpoints
-
-```text
-GET /
-GET /internships
-GET /locations
-GET /stats
-```
-
-### `/internships`
-
-Supports data exploration through:
-
-* Search
-* Location filtering
-* Work-mode filtering
-* Internship-type filtering
-* Pagination
-
-The API acts as the bridge between PostgreSQL and the frontend dashboard.
-
----
-
-## 📊 Dashboard
-
-The frontend provides an interactive interface for exploring internship opportunities.
-
-### Main features
-
-* Internship opportunity cards
-* Search
-* Dynamic filters
-* Location filtering
-* Work-mode filtering
-* Internship-type filtering
-* Pagination
-* Statistics
-* Loading states
-* Empty-result handling
-* API error handling
-
-The dashboard consumes data directly from the FastAPI backend.
-
----
-
-## 🐳 Docker Architecture
-
-The application is containerized using **Docker Compose**.
-
-### Services
-
-```text
-┌────────────────────┐
-│     PostgreSQL     │
-└────────────────────┘
-
-┌────────────────────┐
-│      Backend       │
-│      FastAPI       │
-└────────────────────┘
-
-┌────────────────────┐
-│      Frontend      │
-│      Dashboard     │
-└────────────────────┘
-
-┌────────────────────┐
-│       Scraper      │
-│       Scrapy       │
-└────────────────────┘
-```
-
-Docker Compose allows the different components to run as an integrated application with reproducible configuration.
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Internship-Opportunities-Data-Pipeline/
-│
 ├── backend/
+│   ├── app/
+│   │   ├── database/
+│   │   ├── services/
+│   │   └── main.py
 │   ├── Dockerfile
-│   ├── requirements.txt
-│   └── app/
-│       ├── database/
-│       │   ├── database.py
-│       │   └── test_connection.py
-│       │
-│       ├── services/
-│       │   └── internship_service.py
-│       │
-│       └── main.py
-│
+│   └── requirements.txt
 ├── frontend/
-│   ├── Dockerfile
 │   ├── index.html
 │   ├── style.css
-│   └── app.js
-│
+│   ├── app.js
+│   └── Dockerfile
 ├── pipeline/
 │   ├── jobs/
 │   │   └── run_pipeline.py
-│   │
 │   ├── load/
-│   │   ├── load_to_postgres.py
-│   │   └── test_db_connection.py
-│   │
+│   │   └── load_to_postgres.py
+│   ├── notifications/
+│   │   └── email_service.py
 │   ├── scraper/
 │   │   ├── spiders/
-│   │   │   └── publimaroc.py
 │   │   ├── items.py
 │   │   ├── pipelines.py
 │   │   ├── settings.py
-│   │   └── scrapy.cfg
-│   │
+│   │   └── Dockerfile
 │   └── transform/
 │       └── transform.py
-│
 ├── data/
 │   ├── raw/
-│   │   └── publimaroc.json
-│   │
 │   └── processed/
-│       ├── internships.json
-│       └── seen_offers.json
-│
 ├── tests/
-│
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
 ```
 
----
+## Data Pipeline
 
-## ▶️ Running the Project
+### 1. Extract
+
+Scrapy collects internship listings from supported websites. The extracted data is saved as raw JSON for subsequent processing.
+
+### 2. Transform
+
+The transformation stage cleans text fields, normalizes date values, validates required fields, and prepares records for database loading.
+
+### 3. Load
+
+The loading stage inserts processed records into PostgreSQL. Existing records are handled through conflict detection to prevent duplicate insertions.
+
+### 4. Detect New Opportunities
+
+The loader identifies newly inserted records and triggers an email notification for each new offer.
+
+### 5. Serve Data
+
+FastAPI exposes endpoints that allow the frontend to retrieve internship listings, available locations, and dashboard statistics.
+
+### 6. Schedule Execution
+
+Docker Compose runs the pipeline periodically, with a configured interval of 30 minutes.
+
+## Database
+
+The PostgreSQL database stores internship information, including:
+
+* Internship title and company
+* Location and work mode
+* Internship type and stipend
+* Description and skills
+* Publication date and application deadline
+* Application URL and source website
+* Scraping timestamp
+
+Each internship is associated with a unique identifier to support duplicate prevention.
+
+## API Endpoints
+
+| Endpoint           | Description                   |
+| ------------------ | ----------------------------- |
+| `GET /`            | API welcome endpoint          |
+| `GET /internships` | Retrieve internship listings  |
+| `GET /locations`   | Retrieve available locations  |
+| `GET /stats`       | Retrieve dashboard statistics |
+
+The API runs locally on port `8000` by default.
+
+## Getting Started
 
 ### Prerequisites
 
-Make sure the following are installed:
+Install the following tools before running the project:
 
-* Python 3.12+
-* Docker
-* Docker Compose
-* PostgreSQL
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 * Git
+* A Resend account and API key for email notifications
 
----
-
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-
+git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd Internship-Opportunities-Data-Pipeline
 ```
 
----
+Replace the repository URL with the actual URL of your GitHub repository.
 
-### 2. Start the Dockerized application
+### 2. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+EMAIL_FROM=your_verified_sender
+EMAIL_TO=your_email_address
+```
+
+Use valid sender details supported by your Resend account. Never commit the `.env` file or expose API keys publicly.
+
+Database settings are configured through Docker Compose.
+
+### 3. Build and Start the Application
 
 ```bash
-docker compose up --build
+docker compose up -d --build
 ```
 
-This starts the main application services.
+### 4. Access the Application
 
----
+Once the services have started, open:
 
-### 3. Run the data pipeline
+* **Dashboard:** http://localhost:5500
+* **API:** http://localhost:8000
+* **API Documentation:** http://localhost:8000/docs
 
-From the project root:
+### 5. Monitor the Services
+
+Check running containers:
 
 ```bash
-python pipeline/jobs/run_pipeline.py
+docker compose ps
 ```
 
-The orchestration script executes:
+View scheduler logs:
 
-```text
-Scrapy
-  ↓
-Raw JSON
-  ↓
-Transformation
-  ↓
-Processed JSON
-  ↓
-PostgreSQL
+```bash
+docker compose logs -f scheduler
 ```
 
----
+View backend logs:
 
-## 🧪 Data Quality & Validation
+```bash
+docker compose logs -f backend
+```
 
-The pipeline includes validation mechanisms to ensure that records contain the required information before being processed further.
+Stop the application:
 
-Required fields include:
+```bash
+docker compose down
+```
 
-* `title`
-* `published_at`
-* `url`
-* `source`
+To stop the application without deleting the named database volume, do not add the `-v` option.
 
-The transformation layer also normalizes text and date formats before database loading.
+## Current Data Source
 
----
+The initial implementation uses Publimaroc as its working internship source. Additional sources can be integrated when their website structure, accessibility, and scraping permissions have been verified.
 
-## 🔍 Current Data Source
+Scraping behavior depends on each website's availability and access restrictions. The project should respect website terms of service and `robots.txt` rules.
 
-The current implementation includes internship extraction from **Publimaroc**.
+## Future Improvements
 
-The scraper is designed with a modular structure so that additional internship sources can be integrated as independent Scrapy spiders.
+* Integrate additional permitted internship sources.
+* Add automated tests for scraping, transformation, and loading.
+* Improve email delivery reliability with retry handling.
+* Add more advanced filtering and sorting options.
+* Improve monitoring, logging, and error reporting.
+* Introduce data quality metrics and pipeline execution history.
+* Add CI/CD automation.
 
----
+## Learning Objectives
 
-## 🛠️ Tech Stack
+This project provides practical experience with:
 
-### Data Engineering
+* ETL pipeline design and implementation
+* Web scraping with Scrapy
+* Data cleaning and validation
+* PostgreSQL database operations
+* Duplicate detection and incremental data loading
+* REST API development with FastAPI
+* Frontend and backend integration
+* Email service integration
+* Docker-based deployment and scheduling
 
-* Python
-* Scrapy
-* Pandas
-* ETL / Data Pipeline concepts
-* Data Cleaning
-* Data Validation
-* Incremental Processing
-
-### Database
-
-* PostgreSQL
-* SQL
-
-### Backend
-
-* FastAPI
-* REST API
-* Uvicorn
-* Psycopg
-
-### Frontend
-
-* HTML
-* CSS
-* JavaScript
-
-### DevOps
-
-* Docker
-* Docker Compose
-
-### Development
-
-* Git
-* VS Code
-
----
-
-## 🎯 Engineering Concepts Demonstrated
-
-This project demonstrates practical understanding of:
-
-* Web data extraction
-* ETL pipeline design
-* Data ingestion
-* Data cleaning and normalization
-* Data validation
-* Unique identifier generation
-* Incremental data processing
-* Relational database storage
-* REST API development
-* Backend–database integration
-* Frontend–API integration
-* Containerization
-* Multi-service application architecture
-
----
-
-## 🚀 Future Improvements
-
-The project architecture allows several future extensions:
-
-* Additional internship websites
-* Automated periodic scraping
-* Advanced incremental processing
-* User preference management
-* Personalized internship matching
-* Email notifications for newly discovered opportunities
-* Advanced data quality monitoring
-* Automated testing
-* CI/CD
-* Production deployment
-
----
-
-## 👩‍💻 Author
+## Author
 
 **Chaymae Hanini**
 
-Master's Student — Big Data & Smart Systems
-Focus: **Data Engineering & AI**
+Master's Student in Big Data and Intelligent Systems
+Interested in Data Engineering, Data Pipelines, and Intelligent Data Applications.
 
----
+* LinkedIn: [chaymae-hanini](https://www.linkedin.com/in/chaymae-hanini/)
 
-## ⭐ Project Goal
+## License
 
-This project was developed as a practical Data Engineering application to demonstrate the complete journey of data from **web extraction to a usable data product**:
-
-```text
-Extract → Transform → Store → Serve → Visualize
-```
-
-The goal is not only to collect internship data, but to build a reproducible and extensible data pipeline connected to a real web application.
+This project is intended for educational and portfolio purposes. Add a `LICENSE` file if you choose to distribute it under a specific open-source license.
