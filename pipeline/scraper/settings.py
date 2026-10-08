@@ -85,3 +85,9 @@ ITEM_PIPELINES = {
 
 # Set settings whose default value is deprecated to a future-proof value
 FEED_EXPORT_ENCODING = "utf-8"
+FEEDS = {
+    "data/raw/publimaroc.json": {
+        "format": "json",
+        "overwrite": True,
+    }
+}

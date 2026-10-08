@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 import hashlib
 import json
@@ -17,8 +18,11 @@ class InternshipPipeline:
     def load_seen_offers(self):
 
         seen_file = Path(
-            "../../data/processed/seen_offers.json"
-        )
+            os.getenv(
+               "SEEN_OFFERS_FILE",
+               "../data/processed/seen_offers.json"
+            )
+      )
 
         if not seen_file.exists():
             return set()
@@ -39,7 +43,10 @@ class InternshipPipeline:
     def save_seen_offers(self, seen_offers):
 
         seen_file = Path(
-            "../../data/processed/seen_offers.json"
+            os.getenv(
+                "SEEN_OFFERS_FILE",
+                "../data/processed/seen_offers.json"
+            )
         )
 
         with open(

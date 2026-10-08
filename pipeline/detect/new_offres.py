@@ -1,0 +1,1 @@
+def detect_new_offers(records, existing_ids):

@@ -1,0 +1,61 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: internship_postgres
+    environment:
+      POSTGRES_DB: internship_finder
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d internship_finder"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: internship_backend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: internship_finder
+      DB_USER: postgres
+      DB_PASSWORD: root
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+         condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: internship_frontend
+    ports:
+      - "5500:80"
+    depends_on:
+      - backend     
+  
+  scraper:
+    build:
+      context: .
+      dockerfile: pipeline/scraper/Dockerfile
+    container_name: internship_scraper
+    environment:
+      SEEN_OFFERS_FILE: /app/data/processed/seen_offers.json
+    depends_on:
+      postgres:
+        condition: service_healthy
+    
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  postgres_data:
