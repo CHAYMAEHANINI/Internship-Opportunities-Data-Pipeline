@@ -6,7 +6,6 @@ COPY pipeline/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY pipeline/scrapy.cfg .
-COPY pipeline/scraper ./scraper
+COPY pipeline ./pipeline
 
 CMD ["scrapy", "crawl", "publimaroc"]

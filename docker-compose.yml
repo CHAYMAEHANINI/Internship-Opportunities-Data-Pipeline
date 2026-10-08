@@ -1,3 +1,4 @@
+
 services:
   postgres:
     image: postgres:18
@@ -31,7 +32,7 @@ services:
       - "8000:8000"
     depends_on:
       postgres:
-         condition: service_healthy
+        condition: service_healthy
 
   frontend:
     build:
@@ -41,8 +42,8 @@ services:
     ports:
       - "5500:80"
     depends_on:
-      - backend     
-  
+      - backend
+
   scraper:
     build:
       context: .
@@ -53,9 +54,34 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    
     volumes:
       - ./data:/app/data
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: pipeline/scraper/Dockerfile
+    container_name: internship_scheduler
+    env_file:
+      - .env
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: internship_finder
+      DB_USER: postgres
+      DB_PASSWORD: root
+      SEEN_OFFERS_FILE: /app/data/processed/seen_offers.json
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+    command: >
+      sh -c "while true;
+      do
+        python pipeline/jobs/run_pipeline.py;
+        sleep 1800;
+      done"
 
 volumes:
   postgres_data:
