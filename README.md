@@ -1,5 +1,9 @@
 # Internship Opportunities Data Pipeline
 
+
+
+![Internship Finder Dashboard](docs/dashboard.png)
+
 An automated data engineering and web application project that collects internship opportunities, transforms and validates the data, stores offers in PostgreSQL, and displays them through a web dashboard. The system is designed to identify newly discovered offers and send email notifications.
 
 ## Overview
