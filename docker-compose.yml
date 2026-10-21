@@ -49,6 +49,7 @@ services:
       context: .
       dockerfile: pipeline/scraper/Dockerfile
     container_name: internship_scraper
+    working_dir: /app/pipeline
     environment:
       SEEN_OFFERS_FILE: /app/data/processed/seen_offers.json
     depends_on:
