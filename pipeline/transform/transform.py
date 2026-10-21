@@ -5,13 +5,15 @@ from datetime import datetime
 
 def transform_data(data):
     transformed_data = []
-
+    seen_ids = set()
     for record in data:
         record = clean_record(record)
 
         if not validate_record(record):
             continue
-
+        if record.get("id") in seen_ids:
+            continue
+        seen_ids.add(record.get("id"))
         record = normalize_dates(record)
 
         transformed_data.append(record)
@@ -45,12 +47,20 @@ def normalize_dates(record):
     return record
 
 def load_raw_data():
-    raw_file = Path("data/raw/publimaroc.json")
+    all_records = []
 
-    with open(raw_file, "r", encoding="utf-8") as file:
-        data = json.load(file)
+    for raw_file in sorted(Path("data/raw").glob("*.json")):
+        try:
+            with open(raw_file, "r", encoding="utf-8") as file:
+                records = json.load(file)
+        except (json.JSONDecodeError, OSError) as error:
+            print(f"SKIPPED {raw_file.name}: {error}")
+            continue
 
-    return data
+        print(f"{raw_file.name}: {len(records)} records")
+        all_records.extend(records)
+
+    return all_records
 
 
 

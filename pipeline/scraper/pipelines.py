@@ -69,10 +69,14 @@ class InternshipPipeline:
         # Publication date
         if item.get("published_at"):
 
-            item["published_at"] = datetime.strptime(
-                item["published_at"],
-                "%d %b %Y %H:%M"
-            ).isoformat(sep=" ")
+            raw = item["published_at"]
+
+            try:
+                parsed = datetime.fromisoformat(raw)
+            except ValueError:
+                parsed = datetime.strptime(raw, "%d %b %Y %H:%M")
+
+            item["published_at"] = parsed.isoformat(sep=" ")
 
         # Application deadline
         if item.get("application_deadline"):

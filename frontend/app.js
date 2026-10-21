@@ -13,6 +13,15 @@ const nextButton = document.getElementById("next-button");
 const pageInfo = document.getElementById("page-info");
 
 
+function formatSkills(skills) {
+    if (!skills) return "Not specified";
+    let list = Array.isArray(skills)
+        ? skills
+        : String(skills).replace(/^\{|\}$/g, "").split(",");
+    list = list.map(s => s.replace(/^"|"$/g, "").trim()).filter(Boolean);
+    return list.length ? list.join(", ") : "Not specified";
+}
+
 function displayInternships(internships) {
 
     const container = document.getElementById("internships-container");
@@ -55,7 +64,7 @@ function displayInternships(internships) {
             
             <p>
                 <strong>Skills:</strong>
-                ${internship.skills || "Not specified"}
+                ${formatSkills(internship.skills)}
             </p>
 
             <p>

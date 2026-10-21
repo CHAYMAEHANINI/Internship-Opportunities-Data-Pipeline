@@ -39,6 +39,15 @@ class PublimarocSpider(scrapy.Spider):
 
     name = "publimaroc"
 
+    custom_settings = {
+        "FEEDS": {
+            "../data/raw/publimaroc.json": {
+                "format": "json",
+                "overwrite": True,
+            }
+        }
+    }
+
     allowed_domains = ["publimaroc.com"]
 
     start_urls = [

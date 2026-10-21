@@ -1,5 +1,453 @@
 [
     {
+        "id": "44e9e7eaf0069f83bf12bb124432a1e2",
+        "title": "Fidaroc Grant Thornton lance un recrutement de 8 profils",
+        "company": "Fidaroc Grant Thornton",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Fidaroc Grant Thornton recrute 8 profils à Casablanca: des Auditeurs Débutants, un Auditeur IT Senior et un Manager Transaction Services en CDI, ainsi que des stagiaires en audit, en stratégie, en gestion des immobilisations et en fiscalité.",
+        "skills": [],
+        "published_at": "2026-10-20 18:00:43",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/fidaroc-grant-thornton-lance-un-recrutement-de-8-profils/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.123916"
+    },
+    {
+        "id": "664b1ef8f03bdf6892e1b63bdbb8ae32",
+        "title": "Ecomub recrute des stagiaires en RH et account management à Rabat",
+        "company": "Ecomub",
+        "location": "Rabat",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Ecomub recrute deux stagiaires à Rabat: un Stagiaire Ressources Humaines (RH) et un Stagiaire Account Manager.",
+        "skills": [],
+        "published_at": "2026-10-20 17:00:23",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/ecomub-recrute-des-stagiaires-en-rh-et-account-management-a-rabat/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.130169"
+    },
+    {
+        "id": "5839b527c9299e0bdec6e9e3859cde85",
+        "title": "Dina Kénitra FC recrute des stagiaires en santé, sport et design",
+        "company": "Dina Kénitra FC",
+        "location": "Kénitra",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Dina Kénitra FC recrute 6 stagiaires à Kénitra pour la saison 2026/2027, en design graphique, kinésithérapie, préparation mentale, nutrition sportive, soins infirmiers et préparation physique.",
+        "skills": [],
+        "published_at": "2026-10-20 13:30:05",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/kenitra-dina-kenitra-fc-recrute-des-stagiaires-en-sante-sport-et-design/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.135551"
+    },
+    {
+        "id": "bb72d31c2d1cb8c82be1aab68ed9c53c",
+        "title": "À Rabat, AVL Maroc recrute des stagiaires PFE en ingénierie",
+        "company": "AVL",
+        "location": "Rabat",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "AVL Maroc lance son programme de stages de fin d'études (PFE) 2027 et recrute des étudiants en dernière année pour rejoindre ses équipes dans plusieurs domaines techniques, à Rabat.",
+        "skills": [],
+        "published_at": "2026-10-20 13:00:46",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/a-rabat-avl-maroc-recrute-des-stagiaires-pfe-en-ingenierie/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.140049"
+    },
+    {
+        "id": "fb46ffe61884d7cc7632edf93357ff32",
+        "title": "L’ONCF lance ses Talent Days pour recruter de nouveaux profils",
+        "company": "ONCF Concours,",
+        "location": "Rabat",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "L'ONCF organise les ONCF Talent Days les 26 et 27 octobre 2026 à la gare de Rabat Agdal, avec des opportunités de recrutement et des stages PFE.",
+        "skills": [],
+        "published_at": "2026-10-19 14:30:57",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi-public/loncf-lance-ses-talent-days-pour-recruter-de-nouveaux-profils/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.144461"
+    },
+    {
+        "id": "197c4ca0f992839ef239c08720ca5675",
+        "title": "TI Automotive renforce ses équipes data et achats avec des stagiaires à Tanger",
+        "company": "TI Automotive",
+        "location": "Tanger",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "TI Automotive Morocco propose deux stages à Tanger: un Stage Data Analytics / Data Science de 3 mois et un Stage Achats de 4 mois.",
+        "skills": [],
+        "published_at": "2026-10-19 12:30:26",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/ti-automotive-renforce-ses-equipes-data-et-achats-avec-des-stagiaires-a-tanger/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.148389"
+    },
+    {
+        "id": "2bf56197a7c88ca9eef3d9e73726afe1",
+        "title": "Villa Sahrai renforce ses équipes de restauration à Casablanca",
+        "company": "Villa Sahrai",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Villa Sahrai recrute des Chefs de Rang, des Commis de Rang et des Stagiaires en Service Administratif à Casablanca.",
+        "skills": [],
+        "published_at": "2026-10-19 10:00:20",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/villa-sahrai-renforce-ses-equipes-de-restauration-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.151899"
+    },
+    {
+        "id": "81bd9bfd6ba76ef6dbc0f278798bb9a4",
+        "title": "Kromberg & Schubert ouvre 4 postes à Kénitra",
+        "company": "Kromberg & Schubert",
+        "location": "Kénitra",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Kromberg & Schubert recrute 4 profils à Kénitra dans la production, la qualité et les achats, dont un Acheteur Gestion des Commandes en stage pré-embauche.",
+        "skills": [],
+        "published_at": "2026-10-18 13:00:11",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/kromberg-schubert-ouvre-4-postes-a-kenitra-2/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.155340"
+    },
+    {
+        "id": "850a49d73de8c0820358f012b38fd383",
+        "title": "Deloitte lance une campagne de recrutement d’auditeurs stagiaires à Casablanca",
+        "company": "Deloitte",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Deloitte Extended Services recrute des Auditeurs Stagiaires (H/F) à Casablanca pour un stage de fin d'études à partir de janvier 2027.",
+        "skills": [],
+        "published_at": "2026-10-18 11:00:18",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/deloitte-lance-une-campagne-de-recrutement-dauditeurs-stagiaires-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.158944"
+    },
+    {
+        "id": "12d6f47b644284817acb4e7de7095002",
+        "title": "SALAFIN lance une campagne de recrutement à Casablanca",
+        "company": "Salafin",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "SALAFIN recrute 8 profils à Casablanca en trésorerie, support, AMOA, recouvrement, conformité, contrôle et service clients, dont un stage de 6 mois.",
+        "skills": [],
+        "published_at": "2026-10-16 19:00:18",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/salafin-lance-une-campagne-de-recrutement-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.162652"
+    },
+    {
+        "id": "5948b76a3989b4289da755fb6ec2caf5",
+        "title": "Bac+2: Simoldes recrute des stagiaires en maintenance à Kénitra",
+        "company": "Simoldes Plasticos",
+        "location": "Kénitra",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Simoldes recrute des Stagiaires en Maintenance (H/F) au sein de son département Maintenance à Kénitra.",
+        "skills": [],
+        "published_at": "2026-10-16 16:30:39",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/bac2-simoldes-recrute-des-stagiaires-en-maintenance-a-kenitra/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.166086"
+    },
+    {
+        "id": "4ae1d84ab68c5bcd668cae57b83cb4f6",
+        "title": "Fondation Zakoura ouvre des opportunités de stages et d’emploi à Casablanca",
+        "company": "Fondation Zakoura",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "La Fondation Zakoura recrute 2 stagiaires en informatique pour des stages IT de 4 mois et un(e) Chargé(e) de Développement des programmes, à Casablanca.",
+        "skills": [],
+        "published_at": "2026-10-16 12:30:28",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/fondation-zakoura-ouvre-des-opportunites-de-stages-et-demploi-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.169627"
+    },
+    {
+        "id": "5e83d357afa4e20f741168ba7103d0a5",
+        "title": "Candidatures spontanées chez Centrale Danone pour stages, PFE et emplois",
+        "company": "Centrale Danone",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Centrale Danone invite les étudiants, les jeunes diplômés et les candidats expérimentés à déposer leur candidature spontanée à l'occasion du Forum de l'École Centrale Casablanca.",
+        "skills": [],
+        "published_at": "2026-10-15 15:30:53",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/candidatures-spontanees/candidatures-spontanees-chez-centrale-danone-pour-stages-pfe-et-emplois/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.173094"
+    },
+    {
+        "id": "5ff05668307050f4e979997333d51208",
+        "title": "Speedaf recrute 6 stagiaires en service client à Casablanca",
+        "company": "Speedaf Morocco",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Speedaf recrute 6 stagiaires en Service Client à Casablanca, pour un stage de 3 mois ouvert aux profils Bac+2 ou plus.",
+        "skills": [],
+        "published_at": "2026-10-14 15:30:43",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/speedaf-recrute-6-stagiaires-en-service-client-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.177023"
+    },
+    {
+        "id": "f0101942ceb4ceb87d2b346b008794dd",
+        "title": "Bac+2: Groupe Premium recrute des stagiaires à Casablanca",
+        "company": "Groupe Premium",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Groupe Premium recrute 3 stagiaires à Casablanca, en administration du personnel, en comptabilité et en administration du service après-vente.",
+        "skills": [],
+        "published_at": "2026-10-14 11:30:06",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/bac2-groupe-premium-recrute-des-stagiaires-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.180359"
+    },
+    {
+        "id": "effebd0ec543faae224b2350e19b556d",
+        "title": "Comptabilité et SAV: Top Class Expresso recrute à Casablanca",
+        "company": "Top Class",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Top Class Expresso recrute un Cost Accountant / Comptable Analytique et Polyvalent(e) et propose deux stages, en comptabilité et en réparation de machines à café, à Casablanca.",
+        "skills": [],
+        "published_at": "2026-10-14 11:00:09",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/comptabilite-et-sav-top-class-expresso-recrute-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.183827"
+    },
+    {
+        "id": "c5c731ca2f47c4234511caba0c7558cb",
+        "title": "À Casablanca, Payment Center for Africa recrute 4 stagiaires PFE",
+        "company": "Payment Center for Africa",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Payment Center for Africa (PCA) recrute 4 stagiaires PFE à Casablanca: 2 Ingénieur(e)s Support et 2 Chargé(e)s de Relation Clients, avec une perspective d’embauche à l’issue du stage.",
+        "skills": [],
+        "published_at": "2026-10-12 14:15:51",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/a-casablanca-payment-center-for-africa-recrute-4-stagiaires-pfe/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.187449"
+    },
+    {
+        "id": "9427f81e21e2ae679ae1833ad4a79600",
+        "title": "Stages RH et IT chez FORVIA à Salé et El Jadida",
+        "company": "FORVIA",
+        "location": "El Jadida",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "FORVIA recrute 4 stagiaires pour ses sites de Salé (Technopolis) et d’El Jadida, en ressources humaines, réseaux informatiques et maintenance électronique.",
+        "skills": [],
+        "published_at": "2026-10-12 12:45:30",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/stages-rh-et-it-chez-forvia-a-sale-et-el-jadida/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.191081"
+    },
+    {
+        "id": "45082855c146c699f9458ab8fcbcd7ec",
+        "title": "EM Énergie lance une grande campagne de recrutement dans six villes",
+        "company": "EM Energie",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "EM Énergie recrute plusieurs profils techniques et propose des stages à Casablanca, Tanger, Kénitra, Rabat, Dakhla et Benslimane. Les opportunités concernent notamment les métiers des fluides, de l’électricité, du QHSE, de l’informatique, du commissioning et du contrôle qualité. Entreprise marocaine spécialisée dans les solutions énergétiques et multi-techniques, EM Énergie intervient dans la conception, la réalisation […]",
+        "skills": [],
+        "published_at": "2026-10-12 10:30:51",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/em-energie-lance-une-grande-campagne-de-recrutement-dans-six-villes/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.194718"
+    },
+    {
+        "id": "b0e1362145b6023ce4a83e03113356e6",
+        "title": "Stages et CDI chez Medmilk à Marrakech, Rabat et Casablanca",
+        "company": "Medmilk",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Medmilk Albane Maroc recrute un Responsable Ressources Humaines en CDI à Marrakech et un Superviseur Commercial à Rabat, et propose des stages en marketing, en ressources humaines et au service magasin.",
+        "skills": [],
+        "published_at": "2026-10-12 09:30:16",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/stages-et-cdi-chez-medmilk-a-marrakech-rabat-et-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.198310"
+    },
+    {
+        "id": "e5ee863e19e6581033cd0d81ff74325c",
+        "title": "Emplois et stages chez Alpha 55 pour les jeunes Ingénieurs Bac+5",
+        "company": "Alpha 55",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Alpha 55 recrute de jeunes Ingénieurs Bac+5 de toutes spécialités à Casablanca. Cette campagne s’adresse aux lauréats 2026 à la recherche d’une première expérience professionnelle ainsi qu’aux étudiants en dernière année souhaitant réaliser leur stage PFE. Créée en 1979, Alpha 55 est une enseigne marocaine de distribution implantée à Casablanca. Son offre couvre plusieurs univers, […]",
+        "skills": [],
+        "published_at": "2026-10-11 11:00:57",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/emplois-et-stages-chez-alpha-55-pour-les-jeunes-ingenieurs-bac5/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.201692"
+    },
+    {
+        "id": "ac16027f1da1ccb5a485a1851f6112b8",
+        "title": "Étudiants en logistique: MarGlory recrute des stagiaires dans 3 villes",
+        "company": "MarGlory",
+        "location": "Agadir",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "MarGlory recrute des stagiaires en transport et logistique à Casablanca, Tanger et Agadir.",
+        "skills": [],
+        "published_at": "2026-10-10 10:00:00",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/etudiants-en-logistique-marglory-recrute-des-stagiaires-dans-3-villes/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.205373"
+    },
+    {
+        "id": "13cf09cd2b367bd303984c3bd1d68c50",
+        "title": "Le fabricant de matériel électrique INGELEC recrute dans 4 villes",
+        "company": "Ingelec",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "INGELEC recrute 16 profils à Casablanca, Salé, Témara et Dar Bouazza, majoritairement en CDI: cadres achats et méthodes, techniciens et chef de maintenance, chef d'atelier peinture, opérateurs, animateurs commerciaux et stagiaires.",
+        "skills": [],
+        "published_at": "2026-10-08 18:00:30",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/le-fabricant-de-materiel-electrique-ingelec-recrute-dans-4-villes/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.209162"
+    },
+    {
+        "id": "81d7d708cd744fbbc09a0249c0ab4868",
+        "title": "Offres d’emploi chez le cabinet OmniPact à Casablanca",
+        "company": "OmniPact",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "OmniPact recrute à Casablanca des consultants et managers en audit, gouvernance, risques et conformité (GRC), M&A, fiscalité et expertise comptable, ainsi qu'un responsable facturation, un chargé de paie et un stagiaire PFE.",
+        "skills": [],
+        "published_at": "2026-10-08 14:00:24",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/offres-demploi-chez-le-cabinet-omnipact-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.212732"
+    },
+    {
+        "id": "f7e71575e23476285bc276c562b0f4dd",
+        "title": "Ingénieurs et techniciens: SEWS Maroc recrute à Kénitra et Aïn Aouda",
+        "company": "Sews",
+        "location": "Kénitra",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "SEWS Maroc recrute 20 profils à Kénitra, Aïn Aouda et Skhirat: ingénieurs qualité et procédés, chefs de projet, techniciens de maintenance et de production, fonctions support et stagiaires, dans le câblage automobile.",
+        "skills": [],
+        "published_at": "2026-10-07 20:00:19",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/emploi/ingenieurs-et-techniciens-sews-maroc-recrute-a-kenitra-et-ain-aouda/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.216108"
+    },
+    {
+        "id": "2b4d83271a4b035a1a7e1b0b40060e79",
+        "title": "Procter & Gamble lance son Winter Internship Summit: stages dans plusieurs départements à Casablanca",
+        "company": "Procter & Gamble",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Procter & Gamble (P&G) recrute des stagiaires sur 7 postes à Casablanca dans le cadre de son Winter Internship Summit: Marketing, Sales Key Account Manager, IT Project Manager, HR, Supply Chain Manager, Finance et Engineering/Manufacturing. Procter & Gamble est un groupe international de biens de consommation, dont le bureau marocain est situé à Casablanca. Son […]",
+        "skills": [],
+        "published_at": "2026-10-06 13:30:16",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/procter-gamble-lance-son-winter-internship-summit-stages-dans-plusieurs-departements-a-casablanca/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.219862"
+    },
+    {
+        "id": "5d7f48a52df9a4a41292195b12ba9b4e",
+        "title": "SESA Fret Forwarding lance un recrutement de stagiaires PFE",
+        "company": "SESA Fret Forwarding",
+        "location": "Casablanca",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "SESA Fret Forwarding recrute 2 stagiaires PFE à Casablanca pour le compte d’une société partenaire, au sein des départements gestion des appels d’offres et logistique et approvisionnement. SESA Fret Forwarding propose des solutions sur mesure en supply chain, transit douane et transport national et international, ainsi que des prestations de conseil et de formation destinées […]",
+        "skills": [],
+        "published_at": "2026-10-06 10:30:26",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/sesa-fret-forwarding-lance-un-recrutement-de-stagiaires-pfe/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.223519"
+    },
+    {
+        "id": "b47847fad8a3d134876f69e4b2f8c840",
+        "title": "Yazaki recrute des stagiaires RH à Kénitra dès maintenant",
+        "company": "Yazaki Corporation",
+        "location": "Kénitra",
+        "work_mode": null,
+        "stipend": null,
+        "internship_type": "Stage",
+        "description": "Yazaki recrute des stagiaires en Ressources Humaines à Kénitra, avec des profils Bac+2/3 et Bac+5 spécialisés en RH. Fondé en 1929, Yazaki est un équipementier automobile japonais spécialisé dans les systèmes de câblage, les composants électriques ainsi que les solutions liées à l’électrification, à la connectivité et à l’autonomie des véhicules. Le groupe compte plus […]",
+        "skills": [],
+        "published_at": "2026-09-30 14:30:29",
+        "application_deadline": null,
+        "url": "https://www.dreamjob.ma/stage/yazaki-recrute-des-stagiaires-rh-a-kenitra-des-maintenant/",
+        "source": "Dreamjob",
+        "scraped_at": "2026-10-21T18:38:03.227302"
+    },
+    {
         "id": "ec9e1112220f3842b1dbd6ea3feeab3c",
         "title": "Démarrez votre carrière dans l’industrie automobile",
         "company": "Snop Tanger",
@@ -13,7 +461,7 @@
         "application_deadline": "2027-03-24",
         "url": "https://www.publimaroc.com/annonce/1331/demarrez-votre-carriere-dans-l-industrie-automobile",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:10.950083"
+        "scraped_at": "2026-10-21T18:37:37.695499"
     },
     {
         "id": "930bb5676d95d829ecda7a1b2097c7f6",
@@ -29,7 +477,7 @@
         "application_deadline": "2027-03-24",
         "url": "https://www.publimaroc.com/annonce/1333/offre-de-stage-comptabilite",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:12.318846"
+        "scraped_at": "2026-10-21T18:37:39.125856"
     },
     {
         "id": "a2067d3271a6c3e30e8b47f725c3a216",
@@ -45,7 +493,7 @@
         "application_deadline": "2027-03-25",
         "url": "https://www.publimaroc.com/annonce/1352/offre-de-stage-stagiaire-comptable",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:13.302051"
+        "scraped_at": "2026-10-21T18:37:40.556488"
     },
     {
         "id": "dc21342b7bf794a62e8eb4584ae5f4db",
@@ -61,7 +509,7 @@
         "application_deadline": "2027-03-30",
         "url": "https://www.publimaroc.com/annonce/1400/stage-pre-embauche-remunere-conseillere-pedagogique",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:14.425084"
+        "scraped_at": "2026-10-21T18:37:41.579759"
     },
     {
         "id": "4a06bbd3abf559b72f77bfd9f60057f7",
@@ -77,7 +525,7 @@
         "application_deadline": null,
         "url": "https://www.publimaroc.com/annonce/1441/stage-rh-fes-2-mois-minimum",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:15.784333"
+        "scraped_at": "2026-10-21T18:37:42.320065"
     },
     {
         "id": "475dd87becbe529656c9274558ace264",
@@ -93,7 +541,7 @@
         "application_deadline": null,
         "url": "https://www.publimaroc.com/annonce/1449/offre-de-stage-cabinet-comptable",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:16.874463"
+        "scraped_at": "2026-10-21T18:37:43.345159"
     },
     {
         "id": "49270731e0bfd8fd2c3533d0e015a418",
@@ -109,7 +557,7 @@
         "application_deadline": null,
         "url": "https://www.publimaroc.com/annonce/1452/offre-de-stage-financier-junior-h-f",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:17.910106"
+        "scraped_at": "2026-10-21T18:37:44.785642"
     },
     {
         "id": "b94afe2d616e9ba8ca39abd7c43f8919",
@@ -125,7 +573,7 @@
         "application_deadline": null,
         "url": "https://www.publimaroc.com/annonce/1453/stagiaire-rh-francophone-h-f",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:19.252430"
+        "scraped_at": "2026-10-21T18:37:46.279812"
     },
     {
         "id": "fcc7029a76cac858187a1b91287deb0d",
@@ -143,7 +591,7 @@
         "application_deadline": null,
         "url": "https://www.publimaroc.com/annonce/1476/recrutement-controleur-de-gestion-junior-h-f",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:21.035764"
+        "scraped_at": "2026-10-21T18:37:47.688711"
     },
     {
         "id": "bfb9fa8d783759927f0effb8c0897ede",
@@ -161,7 +609,7 @@
         "application_deadline": "2027-04-10",
         "url": "https://www.publimaroc.com/annonce/1485/offre-de-stage-pre-embauche-assistante-commerciale-f",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:21.760433"
+        "scraped_at": "2026-10-21T18:37:48.377870"
     },
     {
         "id": "412456711b80f7c55badff1f91da2f64",
@@ -177,7 +625,7 @@
         "application_deadline": "2027-04-12",
         "url": "https://www.publimaroc.com/annonce/1546/moucom-recrute-stage-remunere-en-comptabilite-a-casablanca",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:24.371595"
+        "scraped_at": "2026-10-21T18:37:51.094350"
     },
     {
         "id": "800801af734bebd3e79d056ab84056bb",
@@ -195,7 +643,7 @@
         "application_deadline": "2027-04-16",
         "url": "https://www.publimaroc.com/annonce/1613/stage-pre-embauche-en-controle-de-gestion-maroc-fer",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:27.073341"
+        "scraped_at": "2026-10-21T18:37:53.573911"
     },
     {
         "id": "288f1bb1218034f4370ec6886c9db377",
@@ -211,7 +659,7 @@
         "application_deadline": "2027-04-16",
         "url": "https://www.publimaroc.com/annonce/1618/offre-de-stage-ressources-humaines-rh",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:27.914749"
+        "scraped_at": "2026-10-21T18:37:54.769965"
     },
     {
         "id": "847826f7768d1305d0f7daf5ada3008f",
@@ -227,7 +675,7 @@
         "application_deadline": "2027-04-18",
         "url": "https://www.publimaroc.com/annonce/1641/offre-de-stage-en-comptabilite-marrakech",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:28.913219"
+        "scraped_at": "2026-10-21T18:37:55.845228"
     },
     {
         "id": "ab18194e3946e6740bd2922a414e8980",
@@ -245,7 +693,7 @@
         "application_deadline": "2027-04-12",
         "url": "https://www.publimaroc.com/annonce/1566/stagiaire-commercial-et-marketing",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:29.787308"
+        "scraped_at": "2026-10-21T18:37:57.180055"
     },
     {
         "id": "df52eeb97745770d82e9904f224e5a65",
@@ -261,6 +709,6 @@
         "application_deadline": "2027-04-17",
         "url": "https://www.publimaroc.com/annonce/1623/stage-pre-embauche-assistante-comptable",
         "source": "Publimaroc",
-        "scraped_at": "2026-10-21T15:53:31.132576"
+        "scraped_at": "2026-10-21T18:37:58.381957"
     }
 ]
