@@ -15,7 +15,11 @@ class DreamjobSpider(scrapy.Spider):
     allowed_domains = ["dreamjob.ma"]
 
     # Official RSS feed (the HTML page /stage/ is behind a Cloudflare challenge)
-    start_urls = ["https://www.dreamjob.ma/stage/feed/"]
+    start_urls = [
+        "https://www.dreamjob.ma/stage/feed/",
+        "https://www.dreamjob.ma/stage/feed/?paged=2",
+        "https://www.dreamjob.ma/stage/feed/?paged=3",
+    ]
 
     custom_settings = {
         "DOWNLOAD_DELAY": 2,
